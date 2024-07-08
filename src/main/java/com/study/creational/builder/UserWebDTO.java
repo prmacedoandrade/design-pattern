@@ -39,4 +39,12 @@ public class UserWebDTO implements UserDTO {
         this.age = age;
     }
 
+    @Override
+    public String toString() {
+        return "UserWebDTO{" +
+                "name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", age='" + age + '\'' +
+                '}';
+    }
 }

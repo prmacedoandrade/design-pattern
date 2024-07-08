@@ -1,12 +1,31 @@
 package com.study.creational.builder;
 
+
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.time.LocalDate;
 
 //This is our client which also works as "director"
 public class Client {
 
+	private static final Logger LOGGER = LoggerFactory.getLogger(Client.class);
+
 	public static void main(String[] args) {
-		
+		User user = createUser();
+		UserDTOBuilder builder = new UserWebDTOBuilder();
+
+		UserDTO dto = directBuild(builder, user);
+		LOGGER.info(dto.toString());
+
+	}
+
+	private static UserDTO directBuild(UserDTOBuilder builder, User user) {
+		return builder.withFirstName(user.getFirstName())
+				.withLastName(user.getLastName())
+				.withAddress(user.getAddress())
+				.build();
 	}
 	
 	/**
