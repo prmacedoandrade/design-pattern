@@ -9,6 +9,4 @@ public interface UserDTO {
     String getAddress();
     String getAge();
 
-
-
 }

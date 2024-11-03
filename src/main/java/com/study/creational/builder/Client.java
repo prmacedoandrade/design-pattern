@@ -2,15 +2,16 @@ package com.study.creational.builder;
 
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.time.LocalDate;
 
 //This is our client which also works as "director"
 public class Client {
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(Client.class);
+	private static final Logger LOGGER = LogManager.getLogger(Client.class);
 
 	public static void main(String[] args) {
 		User user = createUser();
