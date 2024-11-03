@@ -1,4 +1,4 @@
-package com.gof.design.pattens.builder;
+package com.gof.design.pattens.builder.director;
 
 public class Demo {
 
