@@ -3,6 +3,9 @@ package com.gof.design.pattens.prototype;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Prototype sample
+ */
 public class ArchiverFactory {
 
     private static Map<String, Archiver> prototypes = new HashMap<>();
